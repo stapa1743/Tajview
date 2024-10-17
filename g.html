@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A responsive hotel website">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100,200,300,400,500,600&display=swap');
+
+        :root {
+            --primary: #0077b6;
+            --secondary: #48cae4;
+            --black: #333;
+            --white: #fff;
+            --box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.1);
+        }
+
+        * {
+            font-family: 'Poppins', 'sans-serif';
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+            text-transform: capitalize;
+            transition: .2s linear;
+            outline: none;
+            border: none;
+        }
+
+        html {
+            font-size: 62.5%;
+            overflow: hidden;
+            scroll-padding-top: 9rem;
+            scroll-behavior: smooth;
+        }
+
+        html::-webkit-scrollbar {
+            width: .8rem;
+        }
+
+        html::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        html::-webkit-scrollbar-thumb {
+            background: var(--primary);
+            border-radius: .5rem;
+        }
+
+        section {
+            padding: 5rem 7%;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 1rem 3rem;
+            background: var(--primary);
+            border-radius: 0.5rem;
+            color: var(--white);
+            font-size: 1.7rem;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background: var(--secondary);
+        }
+
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: var(--white);
+            box-shadow: var(--box-shadow);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 2rem 9%;
+        }
+
+        .header .logo {
+            font-size: 2.5rem;
+            font-weight: bolder;
+            color: var(--black);
+        }
+
+        .header .logo i {
+            color: var(--primary);
+            padding: .5rem;
+        }
+
+        .header .navbar a {
+            font-size: 1.7rem;
+            color: var(--black);
+            margin: 0 1rem;
+        }
+
+        .header .navbar.active {
+            display: block;
+        }
+
+        #menu-btn {
+            display: none;
+        }
+
+        .header .navbar a:hover {
+            color: var(--primary);
+        }
+
+        .header .navbar .btn {
+            margin-top: 0;
+            color: var(--white);
+        }
+
+        .header .navbar .btn:hover {
+            color: var(--white);
+        }
+
+        .home {
+            padding: 0;
+        }
+
+        .home .slide {
+            min-height: 100vh;
+            background-size: cover !important;
+            background-position: center !important;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: -1;
+        }
+
+        .home .slide .content {
+            width: 80rem;
+            text-align: center;
+        }
+
+        .home .slide .content h3 {
+            font-size: 4rem;
+            text-transform: uppercase;
+            color: var(--white);
+            line-height: 1.1;
+            padding: 2rem 0;
+        }
+
+        .swiper-button-next,
+        .swiper-button-prev {
+            height: 5rem;
+            width: 5rem;
+            line-height: 5rem;
+            background: var(--white);
+            color: var(--black);
+        }
+
+        .swiper-button-next:hover,
+        .swiper-button-prev:hover {
+            background: var(--primary);
+            color: var(--white);
+        }
+
+        .swiper-button-next::after,
+        .swiper-button-prev::after {
+            font-size: 2rem;
+        }
+
+        .input {
+            width: 100%;
+            padding: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo"><i class="fas fa-hotel"></i>RAM</a>
+        <nav class="navbar">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#room">Room</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#faq">Faq</a>
+            <a href="#reservation" class="btn">Book Now</a>
+        </nav>
+
+        <div id="menu-btn" class="fas fa-bars"></div>
+    </header>
+
+    <section id="home" class="home">
+        <div class="swiper home-slider">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide slide" style="background: url('image/home.jpg') no-repeat;">
+                    <div class="content">
+                        <h3>It's Where Dreams Come True</h3>
+                        <a href="#" class="btn">Visit our offers</a>
+                    </div>
+                </div>
+
+                <div class="swiper-slide slide" style="background: url('image/header.jpg') no-repeat;">
+                    <div class="content">
+                        <h3>It's Where Dreams Come True</h3>
+                        <a href="#" class="btn">Visit our offers</a>
+                    </div>
+                </div>
+
+                <div class="swiper-slide slide" style="background: url('image/welcome.jpg') no-repeat;">
+                    <div class="content">
+                        <h3>It's Where Dreams Come True</h3>
+                        <a href="#" class="btn">Visit our offers</a>
+                    </div>
+                </div>
+
+                <div class="swiper-slide slide" style="background: url('image/taj.jpg') no-repeat;">
+                    <div class="content">
+                        <h3>It's Where Dreams Come True</h3>
+                        <a href="#" class="btn">Visit our offers</a>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </section>
+
+    <section class="availability">
+        <form action="">
+            <div class="box">
+                <p>Check-in <span>*</span></p>
+                <input type="date" class="input">
+            </div>
+
+            <div class="box">
+                <p>Check-out <span>*</span></p>
+                <input type="date" class="input">
+            </div>
+
+            <div class="box">
+                <p>Adults <span>*</span></p>
+                <select name="adults" id="" class="input">
+                    <option value="1">1 Adult</option>
+                    <option value="2">2 Adults</option>
+                    <option value="3">3 Adults</option>
+                </select>
+            </div>
+
+            <div class="box">
+                <p>Children <span>*</span></p>
+                <select name="child" id="" class="input">
+                    <option value="1">1 Child</option>
+                    <option value="2">2 Children</option>
+                    <option value="3">3 Children</option>
+                </select>
+            </div>
+
+            <div class="box">
+                <p>Rooms <span>*</span></p>
+                <select name="room" id="" class="input">
+                    <option value="1">1 Room</option>
+                    <option value="2">2 Rooms</option>
+                    <option value="3">3 Rooms</option>
+                </select>
+            </div>
+
+            <input type="submit" value="Check Availability!" class="btn">
+        </form>
+    </section>
+
+    <script>
+        var swiper = new Swiper('.swiper', {
+            loop: true,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+
+        // Menu toggle script
+        document.getElementById('menu-btn').onclick = function () {
+            var navbar = document.querySelector('.navbar');
+            navbar.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
